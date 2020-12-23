@@ -1,0 +1,20 @@
+import { View, FlatList, Text, Image, ScollView } from 'react-native';
+import { ListItem, Avatar } from 'react-native-elements';
+Props
+- là 1 dữ liệu được truyền từ component cha xuống
+- Không thể tự thay đổi tại component hiện tại, muốn thay đổi thì phải thay đổi từ component cha
+- Tạo sự đa dạng cho component
+State/Global state
+- Có thể thay đổi được giá trị taijcomponent hiện tại
++ State: dùng khi sử dụng chỉ cho 1 component
++ Global state: được sử dụng khi cái data đó được sử dụng cho nhiều component khác nhau
+- Thay đổi giá trị của state ta sử dụng this.setState({Object},Callback);
++ setState là hàm bất đồng độ chỉ nên gọi 1 lần tại 1 thời điểm
++ Sau khi cái setState gọi xong thì Callback được gọi ()=>{}
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ :vòng đời
+Style/StyleSheet
+<FlatList 
+	data = {} chứa data của các phần tử con
+	renderItem = {(elements)=>{elements.item}} rander từng phần tử con ra : item đại diện cho từng phần tử con
+	renderItem={({ item, index }) => {}}
+/>
